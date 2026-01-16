@@ -1,0 +1,259 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin:0;
+}
+
+header{
+    width:100%;
+    height:86px;
+    border-bottom: 1px solid #89928E;
+}
+
+.navbar {
+    display: flex;
+    margin-top:15px;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size:45px;
+    font-weight: 700;
+    padding-left:25px;
+}
+
+.navbar .logo #logo-blue {
+    color: #3D8493;
+}
+
+.navbar .logo #logo-orange {
+    color: #D89F65;
+}
+
+.navbar .logo #logo-green {
+    color: #4A5C2F;
+}
+
+.searchbar {
+    margin-left: 140px;
+}
+
+.searchbar #search-input {
+    width:357px;
+    height: 58px;
+    background-color: #ECF3F5;
+    color: #89928E;
+    border-radius: 10px;
+    border: 1px;
+    text-indent: 20px;
+}
+
+.searchbar #search-input::placeholder{
+    padding-left:0px;
+}
+
+.date {
+    padding-left: 400px;
+}
+
+.date #date-text {
+    font-weight: 400;
+    font-size:15px;
+}
+
+.add-button {
+    padding-left:25px;
+}
+
+.add-button #adder{
+    width: 175px;
+    height: 58px;
+    background-color: #B1CED4;
+    border-radius: 10px;
+    border: 1px none;
+}
+
+.add-button #adder #btn-text {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.add-button #adder:hover{
+    cursor: pointer;
+    background-color:#aac6cb;
+}
+
+.cards {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 214px);
+    padding-left: 150px;
+    column-gap:30px;
+}
+
+.cards .card{
+    position: relative;
+    overflow: hidden;
+    width:203px;
+    height: 214px;
+    text-align: center;
+    background-color: #D8E6E9;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.cards .card .card-image{
+    width: 203px;
+    height: 143px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    object-position: 0;
+}
+
+.cards .card .card-title{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cards .card .card-info{
+    display: flex;
+    align-items: center;
+    gap:6px;
+    padding: 5px 0 0 10px;
+}
+
+.cards .card .card-category {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.cards .card .card-info .card-n {
+    width: 23px;
+    height: 23px;
+    background-color: #E0B284;
+    margin-left: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.cards .card .card-info .card-g {
+    width: 23px;
+    height: 23px;
+    background-color: #D89F65;
+    color:white;
+    margin-left: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.cards .card .card-info .card-n-different {
+    width: 23px;
+    height: 23px;
+    background-color: #A2774C;
+    color:white;
+    margin-left: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.cards .card .card-info .card-percent {
+    width: 23px;
+    height: 23px;
+    background-color: #EAF0F0;
+    color:black;
+    margin-left: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.card-add-btn {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 20px) scale(0.9);
+
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: none;
+
+    background-color: #D89F65;
+    color: #0F2125;
+    font-size: 23px;
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.card:hover .card-add-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1);
+}
+
+
+.cards .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 143px;
+    background-color: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    border-radius: 15px 15px 0 0;
+    pointer-events: none;
+}
+
+.cards .card:hover::before {
+    opacity: 1;
+}
+
+.sort-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 949px;
+    height: 106px;
+    background-color: #EAF0F0;
+    margin-left: 140px;
+    gap:80px;
+}
+
+.btn-sort-active{
+    width: 158px;
+    height: 58px;
+    background-color: #4A5C2F;
+    color: #ECF3F5;
+    font-size: 16px;
+    border-radius:10px;
+    border: none;
+    cursor: pointer;
+}
+.btn-sort-active:hover{
+    background-color: #415129;
+}
+
+.btn-sort{
+    width: 158px;
+    height: 58px;
+    background-color: #D9D9D9;
+    color: #A9A9A9;
+    font-size: 16px;
+    border-radius:10px;
+    border: none;
+    cursor:pointer;
+}
+
+.btn-sort:hover {
+    background-color: #cfcfcf;
+}
+
+.logo-link {
+    text-decoration: none;
+}
